@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Validación en JavaScript</title>
+    <link rel="stylesheet" href="">
+
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Registro</h2>
+        <form id="formulario">
+            <!-- Nombre y Apellido -->
+            <div class="mb-4">
+                <label for="nombre">Nombre y Apellido:</label>
+                <input type="text" id="nombre">
+            </div>
+
+            <!-- Fecha de Nacimiento -->
+            <div class="mb-4">
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento">
+            </div>
+
+            <!-- Slider para Edad (automático) -->
+            <div class="mb-4">
+                <label for="edadSlider">Edad:</label>
+                <input type="range" id="edadSlider" min="0" max="100" readonly>
+                <span id="edadDisplay">0</span> años
+            </div>
+
+            <!-- Tipo de Documento -->
+            <div class="mb-4">
+                <label for="tipoDocumento">Tipo de Documento:</label>
+                <select id="tipoDocumento">
+                    <option value="">Selecciona un tipo de documento</option>
+                    <option value="CC">Cédula de Ciudadanía</option>
+                    <option value="CE">Cédula de Extranjería</option>
+                    <option value="PAS">Pasaporte</option>
+                    <option value="TI">Tarjeta de Identidad</option>
+                </select>
+            </div>
+
+            <!-- Número de Documento -->
+            <div class="mb-4">
+                <label for="numeroDocumento">Número de Documento:</label>
+                <input type="text" id="numeroDocumento">
+            </div>
+
+            <!-- Género -->
+            <div class="mb-4">
+                <label for="genero">Género:</label>
+                <select id="genero">
+                    <option value="">Selecciona tu género</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <!-- Correo -->
+            <div class="mb-4">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo">
+            </div>
+
+            <!-- Contraseña -->
+            <div class="mb-4">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena">
+            </div>
+
+            <!-- Hobbies: Radio buttons -->
+            <div class="mb-4">
+                <label>Selecciona un hobbie:</label><br>
+                <input type="radio" id="deporte" name="hobbie" value="deporte">
+                <label for="deporte">Deporte</label><br>
+                <input type="radio" id="musica" name="hobbie" value="musica">
+                <label for="musica">Música</label><br>
+                <input type="radio" id="lectura" name="hobbie" value="lectura">
+                <label for="lectura">Lectura</label><br>
+            </div>
+
+            <!-- Habilidades: Checkboxes -->
+            <div class="mb-4">
+                <label>Selecciona tus habilidades:</label><br>
+                <input type="checkbox" id="programacion" name="habilidad" value="programacion">
+                <label for="programacion">Programación</label><br>
+                <input type="checkbox" id="dibujo" name="habilidad" value="dibujo">
+                <label for="dibujo">Dibujo</label><br>
+                <input type="checkbox" id="cocina" name="habilidad" value="cocina">
+                <label for="cocina">Cocina</label><br>
+                <input type="checkbox" id="fotografia" name="habilidad" value="fotografia">
+                <label for="fotografia">Fotografía</label><br>
+            </div>
+
+            <!-- Color Favorito -->
+            <div class="mb-4">
+                <label for="colorFavorito">Color Favorito:</label>
+                <input type="color" id="colorFavorito">
+            </div>
+
+            <!-- Botón para enviar -->
+            <button type="submit">Enviar</button>
+        </form>
+
+        <!-- Div para mostrar los mensajes de error o éxito -->
+        <div id="mensaje" class="mt-3"></div>
+    </div>
+
+    <script src="validaciones.js"></script>
+</body>
+</html>
